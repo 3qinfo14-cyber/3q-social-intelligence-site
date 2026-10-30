@@ -1,0 +1,170 @@
+
+:root {
+  --blue: #365cf5;
+  --navy: #14213d;
+  --muted: #617088;
+  --bg: #f6f8fc;
+  --border: #e3e8f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--navy);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  width: min(100% - 40px, 1050px);
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo-symbol {
+  background: var(--blue);
+  color: white;
+  padding: 8px 11px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a, footer a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover, footer a:hover {
+  color: var(--blue);
+}
+
+main {
+  padding: 70px 0 100px;
+}
+
+.eyebrow {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 15px 0 25px;
+}
+
+h2 {
+  font-size: 23px;
+  margin: 0 0 12px;
+}
+
+p, li {
+  color: var(--muted);
+}
+
+.hero-description {
+  max-width: 740px;
+  font-size: 19px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.card, .legal {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.legal {
+  max-width: 850px;
+}
+
+.legal section {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal section:last-child {
+  border: none;
+}
+
+.legal h2 {
+  margin-top: 0;
+}
+
+.notice {
+  background: #edf2ff;
+  border: 1px solid #d7e2ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer {
+  background: white;
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 45px 0 70px;
+  }
+
+  .legal {
+    padding: 20px;
+  }
+}
